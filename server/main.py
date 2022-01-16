@@ -57,6 +57,6 @@ if __name__ == "__main__":
         if e.errno == EADDRINUSE:
             print("La dirección ya esta ocupada por un programa")
             print("Puede ejecutar lo siguiente para ver que proceso ocupa ese puerto")
-            print("sudo lsof -i:8080")
+            print("sudo lsof -i:{}".format(argParser.port))
     except Exception as e:
         print("Excepción no controlada", e)
